@@ -11,8 +11,8 @@ npm run dev
 open http://localhost:3000 and you will see this error:
 
 ```
- Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/farcaster-test/node_modules/.pnpm/@farcaster+frame-sdk@0.0.45_typescript@5.0.2/node_modules/@farcaster/frame-sdk/dist/sdk' imported from /farcaster-test/node_modules/.pnpm/@farcaster+frame-sdk@0.0.45_typescript@5.0.2/node_modules/@farcaster/frame-sdk/dist/index.js
-    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/farcaster-test/node_modules/@farcaster/frame-sdk/dist/sdk' is not supported resolving ES modules imported from /farcaster-test/node_modules/@farcaster/frame-sdk/dist/index.js
+    at finalizeResolution (node:internal/modules/esm/resolve:263:11)
     at moduleResolve (node:internal/modules/esm/resolve:860:10)
     at defaultResolve (node:internal/modules/esm/resolve:984:11)
     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:685:12)
@@ -27,8 +27,7 @@ open http://localhost:3000 and you will see this error:
     at Function._load (node:internal/modules/cjs/loader:1108:12)
     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
     at wrapModuleLoad (node:internal/modules/cjs/loader:220:24) {
-  code: 'ERR_MODULE_NOT_FOUND',
-  url: 'file:///farcaster-test/node_modules/.pnpm/@farcaster+frame-sdk@0.0.45_typescript@5.0.2/node_modules/@farcaster/frame-sdk/dist/sdk'
+  code: 'ERR_UNSUPPORTED_DIR_IMPORT',
+  url: 'file:///farcaster-test/node_modules/@farcaster/frame-sdk/dist/sdk'
 }
- GET / 500 in 17m
 ```
